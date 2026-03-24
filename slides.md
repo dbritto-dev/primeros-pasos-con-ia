@@ -55,9 +55,13 @@ Subconjunto de IA: algoritmos que aprenden de datos sin programación explícita
 
 Subconjunto de ML: redes neuronales profundas (GPT, DALL·E, Whisper).
 
-### 💬 LLMs
+### 🧠 Deep Learning
 
 ChatGPT, Claude, Llama... son modelos de Deep Learning entrenados con cantidades masivas de texto.
+
+::bottom::
+
+🧠 Deep Learning > 🧠 Deep Learning > 📊 Machine Learning > 🤖 Inteligencia Artificial
 
 ---
 
@@ -140,7 +144,7 @@ Más lentos pero superiores en lógica, matemáticas, código complejo y anális
 
 | Característica    | Non-thinking                   | Thinking                                        |
 | ----------------- | ------------------------------ | ----------------------------------------------- |
-| **Velocidad**     | ⚡ Rápido                      | 🐢 Más lento — razona antes                     |
+| **Velocidad**     | ⚡️ Rápido                      | 🐢 Más lento — razona antes                     |
 | **Razonamiento**  | Coincidencia de patrones       | Cadena de pensamiento paso a paso               |
 | **Instrucciones** | Sigue instrucciones directas   | Entiende qué necesitas, aun si no lo dices bien |
 | **Matemáticas**   | Falla en problemas multi-paso  | Excelente en problemas complejos                |
@@ -180,8 +184,6 @@ Corre modelos en tu computadora — sin APIs, sin internet, sin suscripciones.
 - ⚡ **Simple** — Un comando para correr
 - 📦 **Ecosistema** — Llama 3, Mistral, DeepSeek, Phi...
 
-🔗 **ollama.com**
-
 ::right::
 
 ### Primeros Pasos
@@ -197,7 +199,7 @@ ollama pull llama3.2
 ollama run llama3.2
 ```
 
-También disponible para Mac y Windows en ollama.com
+También disponible para Mac y Windows.
 
 ---
 
