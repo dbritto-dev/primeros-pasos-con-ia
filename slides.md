@@ -55,13 +55,13 @@ Subconjunto de IA: algoritmos que aprenden de datos sin programación explícita
 
 Subconjunto de ML: redes neuronales profundas (GPT, DALL·E, Whisper).
 
-### 🧠 Deep Learning
+### 💬 LLMs
 
 ChatGPT, Claude, Llama... son modelos de Deep Learning entrenados con cantidades masivas de texto.
 
 ::bottom::
 
-🧠 Deep Learning > 🧠 Deep Learning > 📊 Machine Learning > 🤖 Inteligencia Artificial
+💬 LLMs > 🧠 Deep Learning > 📊 Machine Learning > 🤖 Inteligencia Artificial
 
 ---
 
@@ -144,7 +144,7 @@ Más lentos pero superiores en lógica, matemáticas, código complejo y anális
 
 | Característica    | Non-thinking                   | Thinking                                        |
 | ----------------- | ------------------------------ | ----------------------------------------------- |
-| **Velocidad**     | ⚡️ Rápido                      | 🐢 Más lento — razona antes                     |
+| **Velocidad**     | Rápido                         | Más lento — razona antes                        |
 | **Razonamiento**  | Coincidencia de patrones       | Cadena de pensamiento paso a paso               |
 | **Instrucciones** | Sigue instrucciones directas   | Entiende qué necesitas, aun si no lo dices bien |
 | **Matemáticas**   | Falla en problemas multi-paso  | Excelente en problemas complejos                |
@@ -182,7 +182,7 @@ Corre modelos en tu computadora — sin APIs, sin internet, sin suscripciones.
 - 🔒 **Privado** — Datos nunca salen de tu máquina
 - 💰 **Gratis** — Sin costos de API
 - ⚡ **Simple** — Un comando para correr
-- 📦 **Ecosistema** — Llama 3, Mistral, DeepSeek, Phi...
+- 📦 **Ecosistema** — Gemma 4, Qwen 3.5, Llama 3, Mistral, DeepSeek, Phi...
 
 ::right::
 
@@ -225,6 +225,7 @@ layout: section
 
 | Tip                         | Ejemplo                                                                       |
 | --------------------------- | ----------------------------------------------------------------------------- |
+| **Usa Inglés**              | "El español usa hasta 15% mas tokens que el inglés para expresar lo mismo."   |
 | **Sé específico**           | "Escribe un email profesional para declinar una reunión" > "escribe un email" |
 | **Da contexto y rol**       | "Actúa como un senior developer revisando este código en Python 3.12..."      |
 | **Itera y refina**          | No esperes perfección al primer intento. Ajusta, pide cambios.                |
@@ -236,14 +237,14 @@ layout: section
 
 # ❌ Qué NO HACER al trabajar con IA
 
-| Tip                              | Por qué                                                                  |
-| -------------------------------- | ------------------------------------------------------------------------ |
-| **No confíes ciegamente**        | La IA alucina. Siempre verifica información crítica.                     |
-| **No compartas datos sensibles** | Evita contraseñas, tokens o datos de clientes en chats de IA en la nube. |
-| **No uses prompts vagos**        | "Ayúdame con mi código" no da contexto. Sé preciso sobre el error.       |
-| **No ignores el contexto**       | Sin contexto adecuado, las respuestas serán genéricas.                   |
-| **No copies sin entender**       | Especialmente código: entiende qué hace antes de implementarlo.          |
-| **No reemplaces tu criterio**    | La IA es herramienta, no sustituto. Tu expertise sigue siendo esencial.  |
+| Tip                              | Por qué                                                                    |
+| -------------------------------- | -------------------------------------------------------------------------- |
+| **No confíes ciegamente**        | La IA alucina. Siempre verifica información crítica.                       |
+| **No compartas datos sensibles** | Evita contraseñas, tokens o datos de clientes en chats de IA en la nube.   |
+| **No uses prompts vagos**        | "Ayúdame con mi código" no da contexto. Sé preciso sobre el error.         |
+| **No ignores el contexto**       | Sin contexto adecuado, las respuestas serán genéricas.                     |
+| **No copies sin entender**       | Especialmente código: entiende qué hace antes de implementarlo.            |
+| **No reemplaces tu criterio**    | La IA es herramienta, no sustituto. Tu conocimiento sigue siendo esencial. |
 
 ---
 layout: section
