@@ -13,6 +13,14 @@ mdc: true
 
 Tu guía para entender y usar IA
 
+<br /><br /><br /><br /><br /><br /><br />
+
+**Danilo Britto**
+
+Senior Software Engineer: Truelogic, SeatPick
+<br>
+Tech Lead: LatConsulting
+
 ---
 
 # Agenda
@@ -94,7 +102,9 @@ layout: section
 | **Token**          | Unidad mínima de texto que procesa un LLM. Una palabra ≈ 1-3 tokens.            |
 | **Context Window** | Máximo de tokens que un modelo puede procesar en una conversación.              |
 | **Temperature**    | Controla la creatividad. Bajo (0) = preciso. Alto (1+) = más creativo.          |
-| **Alucinación**    | Información falsa generada con confianza. Uno de los mayores riesgos.           |
+| **Hallucination**  | Información falsa generada con confianza. Uno de los mayores riesgos.           |
+
+Referencias: [Tokenizador (OpenAI)](https://platform.openai.com/tokenizer)
 
 ---
 
@@ -105,7 +115,7 @@ layout: section
 | **Fine-tuning**   | Re-entrenar un modelo con datos específicos para especializarlo.    |
 | **RAG**           | Conectar el modelo a fuentes externas para respuestas más precisas. |
 | **Embedding**     | Representación numérica de texto como vectores. Búsqueda semántica. |
-| **Inferencia**    | Usar un modelo entrenado para generar respuestas.                   |
+| **Inference**     | Usar un modelo entrenado para generar respuestas.                   |
 | **System Prompt** | Instrucciones iniciales que definen el comportamiento del modelo.   |
 
 ---
