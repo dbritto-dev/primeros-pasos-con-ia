@@ -13,13 +13,15 @@ mdc: true
 
 Tu guía para entender y usar IA
 
-<br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br />
 
 **Danilo Britto**
 
 Senior Software Engineer: Truelogic, SeatPick
 <br>
 Tech Lead: LatConsulting
+<br />
+Redes Sociales: [LinkedIn](https://www.linkedin.com/in/dbritto-dev) / [X (Twitter)](https://x.com/dbritto_dev) / [GitHub](https://github.com/dbritto-dev)
 
 ---
 
@@ -31,7 +33,8 @@ Tech Lead: LatConsulting
 4. **Capacidades de Modelos** — Embedding, Vision, Tools, Thinking
 5. **Ollama y Herramientas** — Corre modelos localmente
 6. **Tips y Mejores Prácticas** — Qué hacer y qué NO hacer
-7. **Q&A** — Preguntas y respuestas
+7. **Demo** — Ollama + Tools + React + OpenAI
+8. **Q&A** — Preguntas y respuestas
 
 ---
 layout: section
@@ -73,9 +76,9 @@ ChatGPT, Claude, Llama... son modelos de Deep Learning entrenados con cantidades
 
 ---
 
-# ¿Qué es un LLM?
+# ¿Qué es un LLM (Large Language Model)?
 
-**Large Language Model** — un modelo entrenado con enormes cantidades de texto para entender y generar lenguaje.
+Es un modelo entrenado con enormes cantidades de texto para entender y generar lenguaje.
 
 | Etapa                      | Descripción                     |
 | -------------------------- | ------------------------------- |
@@ -83,8 +86,6 @@ ChatGPT, Claude, Llama... son modelos de Deep Learning entrenados con cantidades
 | **Proceso**                | GPUs durante semanas o meses    |
 | **Resultado**              | Miles de millones de parámetros |
 | **Output**                 | Texto, código, análisis         |
-
-**Ejemplos:** `GPT-4o` · `Claude` · `Gemini` · `Llama 3` · `Mistral` · `DeepSeek` · `Qwen`
 
 ---
 layout: section
@@ -96,27 +97,30 @@ layout: section
 
 # Términos Importantes
 
-| Término            | Definición                                                                      |
-| ------------------ | ------------------------------------------------------------------------------- |
-| **Prompt**         | La instrucción que le das al modelo. Calidad del prompt = calidad de respuesta. |
-| **Token**          | Unidad mínima de texto que procesa un LLM. Una palabra ≈ 1-3 tokens.            |
-| **Context Window** | Máximo de tokens que un modelo puede procesar en una conversación.              |
-| **Temperature**    | Controla la creatividad. Bajo (0) = preciso. Alto (1+) = más creativo.          |
-| **Hallucination**  | Información falsa generada con confianza. Uno de los mayores riesgos.           |
+| Término                      | Definición                                                                      |
+| ---------------------------- | ------------------------------------------------------------------------------- |
+| **System Prompt**            | Instrucciones iniciales que definen el comportamiento del modelo.               |
+| **User Prompt (aka Prompt)** | La instrucción que le das al modelo. Calidad del prompt = calidad de respuesta. |
+| **Token**                    | Unidad mínima de texto que procesa un LLM. Una palabra ≈ 1-3 tokens.            |
+| **Context Window**           | Máximo de tokens que un modelo puede procesar en una conversación.              |
+| **Hallucination**            | Información falsa generada con confianza. Uno de los mayores riesgos.           |
 
 Referencias: [Tokenizador (OpenAI)](https://platform.openai.com/tokenizer)
 
 ---
 
-# Más Términos Clave
+# Más Términos
 
-| Término           | Definición                                                          |
-| ----------------- | ------------------------------------------------------------------- |
-| **Fine-tuning**   | Re-entrenar un modelo con datos específicos para especializarlo.    |
-| **RAG**           | Conectar el modelo a fuentes externas para respuestas más precisas. |
-| **Embedding**     | Representación numérica de texto como vectores. Búsqueda semántica. |
-| **Inference**     | Usar un modelo entrenado para generar respuestas.                   |
-| **System Prompt** | Instrucciones iniciales que definen el comportamiento del modelo.   |
+| Término         | Definición                                                                        |
+| --------------- | --------------------------------------------------------------------------------- |
+| **Fine-tuning** | Re-entrenar un modelo con datos específicos para especializarlo.                  |
+| **RAG**         | Conectar el modelo a fuentes externas para respuestas más precisas.               |
+| **Embedding**   | Representación numérica de texto como vectores. Búsqueda semántica.               |
+| **Inference**   | Usar un modelo entrenado para generar respuestas.                                 |
+| **Temperature** | Controla la creatividad. Bajo (0) = preciso. Alto (1+) = más creativo.            |
+| **Vector**      | Lista de números que representa el significado matemático de una palabra o frase. |
+
+Términos: Retried-Augmented Generation (**RAG**)
 
 ---
 layout: section
@@ -136,8 +140,6 @@ Incluye modelos base (completan texto) e instruct (siguen instrucciones vía RLH
 
 Rápidos y los más usados para chat y generación de contenido.
 
-**Ejemplos:** GPT-4o, Claude Sonnet, Llama 3 Instruct, Mistral
-
 ::right::
 
 # 🧠 Thinking
@@ -146,7 +148,7 @@ Razonan paso a paso (cadena de pensamiento) antes de dar la respuesta final.
 
 Más lentos pero superiores en lógica, matemáticas, código complejo y análisis profundo.
 
-**Ejemplos:** o1/o3, Claude Opus, DeepSeek-R1, QwQ
+Términos: Chain of Thought (**CoT**)
 
 ---
 
@@ -168,12 +170,14 @@ Más lentos pero superiores en lógica, matemáticas, código complejo y anális
 
 Se pueden filtrar en plataformas como Ollama:
 
-| Capacidad     | Qué hace                                                                    | Modelos ejemplo                         |
-| ------------- | --------------------------------------------------------------------------- | --------------------------------------- |
-| **Embedding** | Convierte texto en vectores numéricos. Búsqueda semántica, RAG, agrupación. | `nomic-embed-text`, `mxbai-embed-large` |
-| **Vision**    | Procesa imágenes además de texto. OCR, analizar gráficos, revisión de UI.   | `llava`, `llama3.2-vision`, `moondream` |
-| **Tools**     | Invoca funciones externas (APIs, bases de datos). Agentes autónomos.        | `llama3.1`, `mistral`, `qwen2.5`        |
-| **Thinking**  | Razona paso a paso antes de responder. Lógica compleja, código avanzado.    | `deepseek-r1`, `qwq`, `phi4-reasoning`  |
+| Capacidad     | Qué hace                                                                    |
+| ------------- | --------------------------------------------------------------------------- |
+| **Embedding** | Convierte texto en vectores numéricos. Búsqueda semántica, RAG, agrupación. |
+| **Vision**    | Procesa imágenes además de texto. OCR, analizar gráficos, revisión de UI.   |
+| **Tools**     | Invoca funciones externas (APIs, bases de datos). Agentes autónomos.        |
+| **Thinking**  | Razona paso a paso antes de responder. Lógica compleja, código avanzado.    |
+
+Términos: Optical Character Recognition (**OCR**)
 
 ---
 layout: section
@@ -222,6 +226,8 @@ Analiza tu hardware desde el navegador (sin enviar datos a ningún servidor).
 | **GPU / VRAM**      | La memoria de tu GPU determina qué modelos caben. Apple Silicon usa memoria unificada. |
 | **RAM del sistema** | Un modelo 7B en 4-bit necesita ~4GB. Un 70B puede requerir 40GB+.                      |
 | **Ancho de banda**  | La velocidad de memoria (GB/s) determina los tokens por segundo.                       |
+
+Términos: Graphics Processing Unit (**GPU**), Video RAM (**VRAM**), Random Access Memory (**RAM**)
 
 ---
 layout: section
