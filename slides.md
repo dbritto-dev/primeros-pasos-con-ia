@@ -37,14 +37,14 @@ Redes Sociales: [LinkedIn](https://www.linkedin.com/in/dbritto-dev) / [X (Twitte
 8. **Q&A** — Preguntas y respuestas
 
 ---
-
-## layout: section
+layout: section
+---
 
 # Conceptos Básicos
 
 ---
-
-## layout: two-cols-header
+layout: two-cols-header
+---
 
 # ¿Qué es la Inteligencia Artificial?
 
@@ -88,8 +88,8 @@ Es un modelo entrenado con enormes cantidades de texto para entender y generar l
 | **Output**                 | Texto, código, análisis         |
 
 ---
-
-## layout: section
+layout: section
+---
 
 # Términos Importantes
 
@@ -104,6 +104,7 @@ Es un modelo entrenado con enormes cantidades de texto para entender y generar l
 | **Token**                    | Unidad mínima de texto que procesa un LLM. Una palabra ≈ 1-3 tokens.            |
 | **Context Window**           | Máximo de tokens que un modelo puede procesar en una conversación.              |
 | **Hallucination**            | Información falsa generada con confianza. Uno de los mayores riesgos.           |
+| **Sycophancy**               | Tendencia del modelo a darte la razón en lugar de la respuesta correcta.        |
 
 Referencias: [Tokenizador (OpenAI)](https://platform.openai.com/tokenizer)
 
@@ -123,14 +124,14 @@ Referencias: [Tokenizador (OpenAI)](https://platform.openai.com/tokenizer)
 Términos: Retried-Augmented Generation (**RAG**)
 
 ---
-
-## layout: section
+layout: section
+---
 
 # Tipos de Modelos
 
 ---
-
-## layout: two-cols
+layout: two-cols
+---
 
 # 💬 Non-thinking
 
@@ -180,73 +181,14 @@ Se pueden filtrar en plataformas como Ollama:
 Términos: Optical Character Recognition (**OCR**)
 
 ---
-
-## layout: two-cols-header
-
-# 🚀 Speculative Decoding & MTP
-
-Aceleración de inferencia sin sacrificar calidad
-
-::left::
-
-### ¿Cómo funciona?
-
-1. **Drafter (Borrador):** Un modelo pequeño y rápido predice varios tokens futuros en paralelo.
-2. **Target (Verificador):** El modelo grande verifica _todos_ los borradores en una sola pasada.
-3. **Resultado:** Si acierta, se aceptan todos de golpe + uno extra.
-
-- ⚡ **Hasta 2x–3x más rápido**
-- ✅ **Calidad idéntica** (misma distribución)
-- 🧠 Inspirado en la _ejecución especulativa_ de CPUs
-
-::right::
-
-### Evolución: MTP (Multi-Token Prediction)
-
-La nueva generación (ej. **Gemma 4**) integra el drafter dentro del mismo modelo:
-
-- **Heads adicionales:** Capas extra entrenadas para predecir token+1, token+2...
-- **Comparten KV Cache:** No recalcula contexto, usa las activaciones del modelo principal.
-- **Eficiencia local:** Permite correr modelos grandes (31B) en hardware de consumo con latencia mínima.
-
+layout: section
 ---
-
-## layout: two-cols-header
-
-# ⚡ DSpark: Speculative Decoding v2
-
-El futuro de la inferencia en producción (DeepSeek)
-
-::left::
-
-### ¿Cómo funciona?
-
-1. **Semi-Autoregressive Generation:** El drafter usa un backbone paralelo + módulo secuencial para capturar dependencias entre tokens.
-2. **Confidence-Scheduled Verification:** Verifica solo lo necesario basado en la confianza del prefijo.
-3. **Resultado:** Se reduce el desperdicio de capacidad del batch y se eliminan los rechazos masivos por _Suffix Decay_.
-
-- 🚀 **60%–85% más rápido** que baseline MTP-1.
-- ✅ **Throughput estable** bajo restricciones estrictas de latencia.
-
-::right::
-
-### Evolución: DSpark (DeepSeek)
-
-La nueva generación (Jul 2026) optimiza el speculative decoding para entornos de producción:
-
-- **Semi-Autoregressive Generation:** Combina backbone paralelo + módulo secuencial → mitiga el _Suffix Decay_ y aumenta tokens aceptados.
-- **Confidence-Scheduled Verification:** Ajusta dinámicamente la longitud de verificación según la probabilidad de supervivencia del prefijo.
-- **Eficiencia en producción:** Previene la degradación del throughput bajo alta concurrencia y baja latencia.
-
----
-
-## layout: section
 
 # Ollama y Herramientas
 
 ---
-
-## layout: two-cols
+layout: two-cols
+---
 
 # ollama.com: IA Local
 
@@ -289,8 +231,8 @@ Analiza tu hardware desde el navegador (sin enviar datos a ningún servidor).
 Términos: Graphics Processing Unit (**GPU**), Video RAM (**VRAM**), Random Access Memory (**RAM**)
 
 ---
-
-## layout: section
+layout: section
+---
 
 # Tips y Mejores Prácticas
 
@@ -322,16 +264,14 @@ Términos: Graphics Processing Unit (**GPU**), Video RAM (**VRAM**), Random Acce
 | **No reemplaces tu criterio**    | La IA es herramienta, no sustituto. Tu conocimiento sigue siendo esencial. |
 
 ---
-
-## layout: section
+layout: section
+---
 
 # Demo
 
 ---
-
 layout: center
 class: text-center
-
 ---
 
 # Q & A
